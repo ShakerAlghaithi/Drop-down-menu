@@ -8,10 +8,10 @@ body {
 }
 /* -----------------------------*/
 .menu {
-	width: 100%;
+
 	background-color: #333;
-	color: #fff;
 	height: 60px;
+	box-shadow: -1px 5px 2px gray;
 }
 .menu #logo {
 	float: left;
@@ -19,7 +19,14 @@ body {
 	padding: 15px 30px;
 	font-size: 1.2em;
 	line-height: 30px;
+	display: none;
 }
+.myimg {
+	width: 100px;
+	float: left;
+	height: 40px;
+	padding: 10px 30px;
+	}
 .menu > ul {
 		margin: 0;
 		padding: 0;
@@ -46,7 +53,7 @@ body {
 	top: 60px;
 	overflow: hidden;
 	background-color: #333; 
-	
+	max-height: 0;
 }
 .sub-content a {
 	color: #fff;
@@ -68,4 +75,17 @@ body {
 }
 .sub-drop ul li:hover {
 	background-color: #ff0055;
+}
+/* ------ controling -------*/
+.menu-item:focus {
+	background-color: #ff0055;
+}
+.menu ul li:hover .sub-content {
+	max-height: 400px;
+	transition: max-height 0.3s ease-in;
+	-webkit-transition: max-height 0.3s ease-in;
+	-moz-transition: max-height 0.3s ease-in;
+}
+#rmenu {
+	float: right;
 }
